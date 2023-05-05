@@ -1,0 +1,203 @@
+:root {
+  --main-clr: #14e2e4d9;
+  --second-clr: #777;
+
+  --bg-clr: #f3f3f3;
+
+  --padding: 0.3em 0.5em;
+
+  --brdr-rd: 0.5em;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  overflow: hidden;
+}
+
+/* main code */
+
+/* start page */
+.startPage {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  text-transform: capitalize;
+  background: rgb(0 0 0 / 57%);
+  box-shadow: 0 0 200px 200px rgb(0 0 0 / 57%) inset;
+}
+.startPage .welcoming {
+  font-size: 2rem;
+  color: var(--main-clr);
+  width: 450px;
+  text-align: center;
+  line-height: 1.7;
+  font-family: "Times New Roman", Times, serif;
+}
+.startPage .name {
+  outline: none;
+  padding: var(--padding);
+  width: 430px;
+  border-radius: var(--brdr-rd);
+  border: 1px solid var(--second-clr);
+  text-align: center;
+  caret-color: var(--main-clr);
+}
+.startPage .level {
+  outline: none;
+  padding: var(--padding);
+  width: 430px;
+  border-radius: var(--brdr-rd);
+  border: 1px solid var(--second-clr);
+  text-align: center;
+  caret-color: var(--main-clr);
+}
+.startPage input:focus::placeholder {
+  opacity: 0;
+}
+.startPage .startBtn {
+  display: block;
+  padding: var(--padding);
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  border: 3px solid var(--main-clr);
+  border-radius: var(--brdr-rd);
+  background: rgb(255 0 0 / 84%);
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.startPage .startBtn:hover {
+  background: rgb(255 0 0 / 44%);
+}
+/* end of the start page */
+
+/*game style*/
+.container {
+  margin: 20px auto;
+  width: 800px;
+  padding: var(--padding);
+  background: var(--bg-clr);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: var(--brdr-rd);
+  text-transform: capitalize;
+  border: 1px solid var(--second-clr);
+  box-shadow: 0.3em -0.3em var(--bg-clr);
+}
+.container .info {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--padding);
+  border-bottom: 1px solid var(--second-clr);
+  color: var(--second-clr);
+  background: white;
+  border-radius: var(--brdr-rd);
+}
+.container .info .name span {
+  color: black;
+  font-weight: 600;
+}
+.container .info .lvl span {
+  color: black;
+  font-weight: 600;
+}
+.game {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--second-clr);
+  min-height: 400px;
+}
+.game legend {
+  font-weight: bold;
+  color: var(--main-clr);
+}
+.game .upcomingWord {
+  flex-basis: 65%;
+  background: white;
+  padding: var(--padding);
+  border-radius: var(--brdr-rd);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  border: none;
+  border-top: 1px solid var(--second-clr);
+}
+.game .upcomingWord div {
+  flex-basis: 48%;
+  height: 30px;
+  padding: var(--padding);
+  border-radius: var(--brdr-rd);
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bolder;
+  border-bottom: 1px solid var(--second-clr);
+  color: white;
+  background-color: var(--main-clr);
+}
+.game .typing {
+  flex-basis: 40%;
+  background: white;
+  padding: var(--padding);
+  border-radius: var(--brdr-rd);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-transform: capitalize;
+  text-align: center;
+  border: none;
+  border-top: 1px solid var(--second-clr);
+}
+.game .typing .currentWord {
+  padding: var(--padding);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--main-clr);
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game .typing .input {
+  padding: var(--padding);
+  border-radius: var(--brdr-rd);
+  border: 4px solid var(--main-clr);
+  font-size: 1.2rem;
+  outline: none;
+  text-align: center;
+  caret-color: var(--main-clr);
+}
+.container .stats {
+  padding: var(--padding);
+  font-family: monospace;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  font-size: 1.2rem;
+  border-radius: var(--brdr-rd);
+  font-weight: bold;
+  color: black;
+}
+.container .stats .counter .totale {
+  color: var(--second-clr);
+}

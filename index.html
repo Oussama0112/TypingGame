@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="mystyle.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="startPage">
+      <p class="welcoming">Welcome to the typing game</p>
+      <input type="text" class="name" id="name" placeholder="Enter Your Name Please" />
+      <input type="text" class="level" list="level" placeholder="Choose your Level Here" />
+      <datalist id="level"> </datalist>
+      <button class="startBtn">start the game</button>
+    </div>
+    <div class="container">
+      <div class="info">
+        <div class="name">name: <span></span></div>
+        <div class="lvl">the current level is: <span>hero</span></div>
+      </div>
+      <div class="game">
+        <fieldset class="upcomingWord">
+          <legend>the upcoming Word</legend>
+        </fieldset>
+        <fieldset class="typing">
+          <legend>the Current Word</legend>
+
+          <div class="currentWord"></div>
+          <input type="text" class="input" />
+        </fieldset>
+      </div>
+      <div class="stats">
+        <div class="timer"></div>
+        <div class="counter"><span class="done">0</span>/<span class="totale">30</span></div>
+      </div>
+    </div>
+    <audio src="audio/won.mp3" preload="auto" class="wonAudio"></audio>
+    <audio src="audio/lost.mp3" preload="auto" class="lostAudio"></audio>
+  </body>
+</html>
